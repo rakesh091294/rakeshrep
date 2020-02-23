@@ -18,11 +18,5 @@ pipeline {
       }
     }
 
-    stage('') {
-      steps {
-        node(label: 'example')
-      }
-    }
-
   }
 }
