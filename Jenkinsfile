@@ -2,25 +2,15 @@ pipeline {
   agent any
   stages {
     stage('stage1') {
-      parallel {
-        stage('stage1') {
-          steps {
-            echo 'hello'
-          }
-        }
-
-        stage('stage 1.1') {
-          steps {
-            sh 'echo "pipeline example"'
-          }
-        }
-
+      steps {
+        echo 'hello'
+        sh 'echo "hello"'
       }
     }
 
     stage('stage 2') {
       steps {
-        echo 'complete'
+        sh 'echo "done"'
       }
     }
 
